@@ -5,6 +5,7 @@ class FcTextStyle {
   const FcTextStyle({this.fontFamily});
   final String? fontFamily;
 
+  /// overline text style
   TextStyle? xSmallText(BuildContext context) {
     return Theme.of(context).textTheme.overline!.copyWith(fontFamily: fontFamily);
   }
@@ -31,6 +32,7 @@ class FcTextStyle {
         .copyWith(color: Colors.black, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
+  /// caption text style
   TextStyle? smallText(BuildContext context) {
     return Theme.of(context).textTheme.caption!.copyWith(fontFamily: fontFamily);
   }
@@ -57,6 +59,7 @@ class FcTextStyle {
         .copyWith(color: Colors.black, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
+  /// body text style
   TextStyle? bodyText(BuildContext context) {
     return Theme.of(context).textTheme.bodyText1!.copyWith(fontFamily: fontFamily);
   }
@@ -83,6 +86,7 @@ class FcTextStyle {
         .copyWith(color: Colors.black, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
+  /// button text style
   TextStyle? buttonText(BuildContext context) {
     return Theme.of(context).textTheme.button!.copyWith(fontFamily: fontFamily);
   }
@@ -103,6 +107,7 @@ class FcTextStyle {
     return Theme.of(context).textTheme.button!.copyWith(color: Colors.black, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
+  /// subtitle text style
   TextStyle? subtitleText(BuildContext context) {
     return Theme.of(context).textTheme.subtitle1!.copyWith(fontFamily: fontFamily);
   }
@@ -129,6 +134,7 @@ class FcTextStyle {
         .copyWith(color: Colors.black, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
+  /// headline6 text style
   TextStyle? headline6Text(BuildContext context) {
     return Theme.of(context).textTheme.headline6!.copyWith(fontFamily: fontFamily);
   }
@@ -155,6 +161,7 @@ class FcTextStyle {
         .copyWith(color: Colors.black, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
+  /// headline5 text style
   TextStyle? headline5Text(BuildContext context) {
     return Theme.of(context).textTheme.headline5!.copyWith(fontFamily: fontFamily);
   }
@@ -181,6 +188,7 @@ class FcTextStyle {
         .copyWith(color: Colors.black, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
+  /// headline4 text style
   TextStyle? headline4Text(BuildContext context) {
     return Theme.of(context).textTheme.headline4!.copyWith(fontFamily: fontFamily);
   }
@@ -207,6 +215,7 @@ class FcTextStyle {
         .copyWith(color: Colors.black, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
+  /// headline3 text style
   TextStyle? headline3Text(BuildContext context) {
     return Theme.of(context).textTheme.headline3!.copyWith(fontFamily: fontFamily);
   }
@@ -233,6 +242,7 @@ class FcTextStyle {
         .copyWith(color: Colors.black, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
+  /// headline2 text style
   TextStyle? headline2Text(BuildContext context) {
     return Theme.of(context).textTheme.headline2!.copyWith(fontFamily: fontFamily);
   }
@@ -259,6 +269,7 @@ class FcTextStyle {
         .copyWith(color: Colors.black, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
+  /// headline1 text style
   TextStyle? headline1Text(BuildContext context) {
     return Theme.of(context).textTheme.headline1!.copyWith(fontFamily: fontFamily);
   }

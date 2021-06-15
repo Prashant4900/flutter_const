@@ -1,6 +1,42 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_const/flutter_const.dart';
+import 'package:flutter_const/server/api_helper.dart';
 
+// Model Class
+class Album {
+  final int userId;
+  final int id;
+  final String title;
+
+  Album({
+    required this.userId,
+    required this.id,
+    required this.title,
+  });
+
+  factory Album.fromJson(Map<String, dynamic> json) {
+    return Album(
+      userId: json['userId'],
+      id: json['id'],
+      title: json['title'],
+    );
+  }
+}
+
+// fetch data
+Future<Album> fetchAlbum() async {
+  ApiBaseHelper _helper = ApiBaseHelper();
+  final response = await _helper.get(
+      baseurl: 'jsonplaceholder.typicode.com', url: 'albums/2');
+  print(response);
+  // For Single Item
+  return Album.fromJson(response);
+  // return response.map<Album>((json) => Album.fromJson(json)).toList();
+}
+
+// root
 void main() {
   runApp(MyApp());
 }
@@ -18,6 +54,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// First Screen
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key}) : super(key: key);
 
@@ -28,46 +65,72 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    FcTextStyle textStyle = FcTextStyle();
     return Scaffold(
       appBar: AppBar(
         title: Text("First Screen"),
       ),
       body: Container(
         width: double.infinity,
+        padding: EdgeInsets.all(12),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            fcVSizedBox2,
-            Text(
-              'Body Bold Text',
-              style: FcTextStyle().bodyBBText(context),
-            ),
+            ElevatedButton(
+                onPressed: () {
+                  FcNavigator().push(context, screen: SecondPage());
+                },
+                child: Text(
+                  'move to second page',
+                  style: textStyle.buttonWText(context),
+                ))
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          FcNavigator().push(context,screen: SecondPage());
-        },
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
 
-class SecondPage extends StatelessWidget {
+// Second Screen
+class SecondPage extends StatefulWidget {
   const SecondPage({Key? key}) : super(key: key);
+
+  @override
+  _SecondPageState createState() => _SecondPageState();
+}
+
+class _SecondPageState extends State<SecondPage> {
+  late Future<Album> futureAlbum;
+  @override
+  void initState() {
+    futureAlbum = fetchAlbum();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     FcTextStyle textStyle = FcTextStyle();
     return Scaffold(
-      body: Center(
-        child: Text(
-          "Second Page",
-          style: textStyle.headline5BBText(context),
+      appBar: AppBar(
+        title: Text("Second Screen"),
+      ),
+      body: Container(
+        width: double.infinity,
+        child: Center(
+          child: FutureBuilder<Album>(
+            future: futureAlbum,
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return Text(snapshot.data!.title,style: textStyle.bodyBBText(context),);
+              } else if (snapshot.hasError) {
+                return Text("${snapshot.error}");
+              }
+              // By default, show a loading spinner.
+              return CircularProgressIndicator();
+            },
+          ),
+
         ),
       ),
     );

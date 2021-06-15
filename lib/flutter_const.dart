@@ -8,5 +8,6 @@ export 'src/noglow.dart';
 export 'src/textstyle.dart';
 
 //server
-export 'server/api_responce.dart';
+export 'server/api_response.dart';
 export 'server/http_exceptions.dart';
+export 'server/api_response.dart';
