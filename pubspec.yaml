@@ -1,7 +1,7 @@
 name: flutter_const
-description: A new Flutter project.
+description: A Flutter package which lots of constant widget and functions which widely used in the development.
 version: 0.0.1
-homepage:
+homepage: https://github.com/Prashant4900/flutter_const
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
