@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MyTextStyle {
-  const MyTextStyle({this.fontFamily});
+class FcTextStyle {
+  const FcTextStyle({this.fontFamily});
   final String? fontFamily;
 
   TextStyle? xSmallText(BuildContext context) {

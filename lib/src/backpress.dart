@@ -1,16 +1,20 @@
 import 'dart:io';
 
+import 'package:flutter/material.dart';
+
 DateTime? backButtonPressedTime;
 
-Future<bool> onWillPop() async {
+Future<bool> fcOnWillPop(context,
+    {String? message, SnackBarBehavior? snackBarBehavior}) async {
   DateTime currentTime = DateTime.now();
 
   //Statement 1 Or statement2
-  bool backButton = backButtonPressedTime == null || currentTime.difference(backButtonPressedTime!) > Duration(seconds: 3);
+  bool backButton = backButtonPressedTime == null ||
+      currentTime.difference(backButtonPressedTime!) >
+          Duration(milliseconds: 10);
 
   if (backButton) {
     backButtonPressedTime = currentTime;
-
     //TODO: add snackBar
 
     return false;
