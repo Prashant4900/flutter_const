@@ -1,21 +1,21 @@
-# Collections of widely used widget and functions.
+# Collections of widely used widgets and functions.
 
 ##### Key points :
-  - This package allows developers to fetch data from server with easiest way,
-  - FcNavigator navigator that make navigation process much easier.
-  - Remove Glow Behavior from list view.
-  - Pre-Build responsice text style
-  - Horizantial and vertical dimensions SizedBox alternative
+  - This package allows developers to fetch data from the server with the easiest way,
+  - FcNavigator navigator that makes the navigation process much easier.
+  - Remove Glow Behavior from a list view.
+  - Pre-Build responsive text style
+  - Horizontal and vertical dimensions SizedBox alternative
   - Double press exit function
 
 ## Next Plans
   - Named Route with FcNavigator.
-  - Improve Api Calling.
-  - other improvemnt also
+  - Improve API Calling.
+  - other improvements also
 
 ## How to Use 
 
-To use flutter_insta, first start by importing the package.
+To use flutter_const, the first starts by importing the package.
 ```dart
 import 'package:flutter_const/flutter_const.dart';
 ```
@@ -79,7 +79,7 @@ fcHSizedBox4
 fcHSizedBox5
 fcHSizedBox6
 ```
-Base sized is 5 and rest of the double of pervious one
+The base sized is 5 and the rest of the double the previous one
 
 ### Navigations
 ```dart 
