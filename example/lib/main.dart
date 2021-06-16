@@ -28,8 +28,7 @@ class Album {
 // fetch data
 Future<Album> fetchAlbum() async {
   ApiBaseHelper _helper = ApiBaseHelper();
-  final response = await _helper.get(
-      baseurl: 'jsonplaceholder.typicode.com', url: 'albums/2');
+  final response = await _helper.get(baseurl: 'jsonplaceholder.typicode.com', url: 'albums/2');
   print(response);
   // For Single Item
   return Album.fromJson(response);
@@ -78,13 +77,14 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-                onPressed: () {
-                  FcNavigator().push(context, screen: SecondPage());
-                },
-                child: Text(
-                  'move to second page',
-                  style: textStyle.buttonWText(context),
-                ))
+              onPressed: () {
+                FcNavigator().push(context, screen: SecondPage());
+              },
+              child: Text(
+                'move to second page',
+                style: textStyle.buttonWText(context),
+              ),
+            )
           ],
         ),
       ),
@@ -122,7 +122,10 @@ class _SecondPageState extends State<SecondPage> {
             future: futureAlbum,
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return Text(snapshot.data!.title,style: textStyle.bodyBBText(context),);
+                return Text(
+                  snapshot.data!.title,
+                  style: textStyle.bodyBBText(context),
+                );
               } else if (snapshot.hasError) {
                 return Text("${snapshot.error}");
               }
@@ -130,7 +133,6 @@ class _SecondPageState extends State<SecondPage> {
               return CircularProgressIndicator();
             },
           ),
-
         ),
       ),
     );
