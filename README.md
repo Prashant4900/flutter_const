@@ -26,7 +26,7 @@ class Demo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: ScrollConfiguration(
-        behavior: fcOnWillPop,
+        behavior: FcNoGlowBehavior(),
         child: Container(),
       ),
     );
@@ -48,7 +48,7 @@ class Demo extends StatelessWidget {
 
       child: WillPopScope(
 
-        onWillPop: FcNoGlowBehavior(),
+        onWillPop: fcOnWillPop,
 
         child: ListView(),
 
