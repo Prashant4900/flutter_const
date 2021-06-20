@@ -26,7 +26,8 @@ class Album {
 // fetch data
 Future<Album> fetchAlbum() async {
   ApiBaseHelper _helper = ApiBaseHelper();
-  final response = await _helper.get(baseurl: 'jsonplaceholder.typicode.com', url: 'albums/2');
+  final response = await _helper.get(
+      baseurl: 'jsonplaceholder.typicode.com', url: 'albums/2');
   print(response);
   // For Single Item
   return Album.fromJson(response);
@@ -43,9 +44,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: FcTheme.light,
+      darkTheme: FcTheme.dark,
+      themeMode: ThemeMode.light,
+      // themeMode: ThemeMode.dark,
+      // themeMode: ThemeMode.system,
       home: MyHomePage(),
     );
   }
@@ -82,9 +85,27 @@ class _MyHomePageState extends State<MyHomePage> {
                 'move to second page',
                 style: textStyle.buttonWText(context),
               ),
-            )
+            ),
+            fcVSizedBox4,
+            Text(
+              "data",
+              style: textStyle.h6Text(context),
+            ),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('Home'),),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('Home'),),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('Home'),),
+        ],
       ),
     );
   }

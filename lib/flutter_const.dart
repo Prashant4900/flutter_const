@@ -6,6 +6,9 @@ export 'src/dimensions.dart';
 export 'src/navigation.dart';
 export 'src/noglow.dart';
 export 'src/textstyle.dart';
+export 'src/theme/dark.dart';
+export 'src/theme/light.dart';
+export 'src/theme/apptheme.dart';
 
 //server
 export 'server/api_response.dart';

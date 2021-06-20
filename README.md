@@ -47,6 +47,22 @@ Future<Album> fetchAlbum() async {
 }
 ```
 
+### Dark Mode
+```dart
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: FcTheme.light,
+      darkTheme: FcTheme.dark,
+      themeMode: ThemeMode.system,
+      home: MyHomePage(),
+    );
+  }
+}
+```
+
 ### Text Style
 ```dart 
 FcTextStyle textStyle = FcTextStyle();

@@ -135,26 +135,26 @@ class FcTextStyle {
   }
 
   /// headline6 text style
-  TextStyle? headline6Text(BuildContext context) {
+  TextStyle? h6Text(BuildContext context) {
     return Theme.of(context).textTheme.headline6!.copyWith(fontFamily: fontFamily);
   }
 
-  TextStyle? headline6WText(BuildContext context) {
+  TextStyle? h6WText(BuildContext context) {
     return Theme.of(context).textTheme.headline6!.copyWith(color: Colors.white, fontFamily: fontFamily);
   }
 
-  TextStyle? headline6BText(BuildContext context) {
+  TextStyle? h6BText(BuildContext context) {
     return Theme.of(context).textTheme.headline6!.copyWith(color: Colors.black, fontFamily: fontFamily);
   }
 
-  TextStyle? headline6WBText(BuildContext context) {
+  TextStyle? h6WBText(BuildContext context) {
     return Theme.of(context)
         .textTheme
         .headline6!
         .copyWith(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
-  TextStyle? headline6BBText(BuildContext context) {
+  TextStyle? h6BBText(BuildContext context) {
     return Theme.of(context)
         .textTheme
         .headline6!
@@ -162,26 +162,26 @@ class FcTextStyle {
   }
 
   /// headline5 text style
-  TextStyle? headline5Text(BuildContext context) {
+  TextStyle? h5Text(BuildContext context) {
     return Theme.of(context).textTheme.headline5!.copyWith(fontFamily: fontFamily);
   }
 
-  TextStyle? headline5WText(BuildContext context) {
+  TextStyle? h5WText(BuildContext context) {
     return Theme.of(context).textTheme.headline5!.copyWith(color: Colors.white, fontFamily: fontFamily);
   }
 
-  TextStyle? headline5BText(BuildContext context) {
+  TextStyle? h5BText(BuildContext context) {
     return Theme.of(context).textTheme.headline5!.copyWith(color: Colors.black, fontFamily: fontFamily);
   }
 
-  TextStyle? headline5WBText(BuildContext context) {
+  TextStyle? h5WBText(BuildContext context) {
     return Theme.of(context)
         .textTheme
         .headline5!
         .copyWith(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
-  TextStyle? headline5BBText(BuildContext context) {
+  TextStyle? h5BBText(BuildContext context) {
     return Theme.of(context)
         .textTheme
         .headline5!
@@ -189,26 +189,26 @@ class FcTextStyle {
   }
 
   /// headline4 text style
-  TextStyle? headline4Text(BuildContext context) {
+  TextStyle? h4Text(BuildContext context) {
     return Theme.of(context).textTheme.headline4!.copyWith(fontFamily: fontFamily);
   }
 
-  TextStyle? headline4WText(BuildContext context) {
+  TextStyle? h4WText(BuildContext context) {
     return Theme.of(context).textTheme.headline4!.copyWith(color: Colors.white, fontFamily: fontFamily);
   }
 
-  TextStyle? headline4BText(BuildContext context) {
+  TextStyle? h4BText(BuildContext context) {
     return Theme.of(context).textTheme.headline4!.copyWith(color: Colors.black, fontFamily: fontFamily);
   }
 
-  TextStyle? headline4WBText(BuildContext context) {
+  TextStyle? h4WBText(BuildContext context) {
     return Theme.of(context)
         .textTheme
         .headline4!
         .copyWith(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
-  TextStyle? headline4BBText(BuildContext context) {
+  TextStyle? h4BBText(BuildContext context) {
     return Theme.of(context)
         .textTheme
         .headline4!
@@ -216,26 +216,26 @@ class FcTextStyle {
   }
 
   /// headline3 text style
-  TextStyle? headline3Text(BuildContext context) {
+  TextStyle? h3Text(BuildContext context) {
     return Theme.of(context).textTheme.headline3!.copyWith(fontFamily: fontFamily);
   }
 
-  TextStyle? headline3WText(BuildContext context) {
+  TextStyle? h3WText(BuildContext context) {
     return Theme.of(context).textTheme.headline3!.copyWith(color: Colors.white, fontFamily: fontFamily);
   }
 
-  TextStyle? headline3BText(BuildContext context) {
+  TextStyle? h3BText(BuildContext context) {
     return Theme.of(context).textTheme.headline3!.copyWith(color: Colors.black, fontFamily: fontFamily);
   }
 
-  TextStyle? headline3WBText(BuildContext context) {
+  TextStyle? h3WBText(BuildContext context) {
     return Theme.of(context)
         .textTheme
         .headline3!
         .copyWith(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
-  TextStyle? headline3BBText(BuildContext context) {
+  TextStyle? h3BBText(BuildContext context) {
     return Theme.of(context)
         .textTheme
         .headline3!
@@ -243,26 +243,26 @@ class FcTextStyle {
   }
 
   /// headline2 text style
-  TextStyle? headline2Text(BuildContext context) {
+  TextStyle? h2Text(BuildContext context) {
     return Theme.of(context).textTheme.headline2!.copyWith(fontFamily: fontFamily);
   }
 
-  TextStyle? headline2WText(BuildContext context) {
+  TextStyle? h2WText(BuildContext context) {
     return Theme.of(context).textTheme.headline2!.copyWith(color: Colors.white, fontFamily: fontFamily);
   }
 
-  TextStyle? headline2BText(BuildContext context) {
+  TextStyle? h2BText(BuildContext context) {
     return Theme.of(context).textTheme.headline2!.copyWith(color: Colors.black, fontFamily: fontFamily);
   }
 
-  TextStyle? headline2WBText(BuildContext context) {
+  TextStyle? h2WBText(BuildContext context) {
     return Theme.of(context)
         .textTheme
         .headline2!
         .copyWith(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
-  TextStyle? headline2BBText(BuildContext context) {
+  TextStyle? h2BBText(BuildContext context) {
     return Theme.of(context)
         .textTheme
         .headline2!
@@ -270,26 +270,26 @@ class FcTextStyle {
   }
 
   /// headline1 text style
-  TextStyle? headline1Text(BuildContext context) {
+  TextStyle? h1Text(BuildContext context) {
     return Theme.of(context).textTheme.headline1!.copyWith(fontFamily: fontFamily);
   }
 
-  TextStyle? headline1WText(BuildContext context) {
+  TextStyle? h1WText(BuildContext context) {
     return Theme.of(context).textTheme.headline1!.copyWith(color: Colors.white, fontFamily: fontFamily);
   }
 
-  TextStyle? headline1BText(BuildContext context) {
+  TextStyle? h1BText(BuildContext context) {
     return Theme.of(context).textTheme.headline1!.copyWith(color: Colors.black, fontFamily: fontFamily);
   }
 
-  TextStyle? headline1WBText(BuildContext context) {
+  TextStyle? h1WBText(BuildContext context) {
     return Theme.of(context)
         .textTheme
         .headline1!
         .copyWith(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: fontFamily);
   }
 
-  TextStyle? headline1BBText(BuildContext context) {
+  TextStyle? h1BBText(BuildContext context) {
     return Theme.of(context)
         .textTheme
         .headline1!
