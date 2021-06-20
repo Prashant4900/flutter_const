@@ -16,11 +16,15 @@ ThemeData darkTheme = ThemeData(
   cardTheme: CardTheme(
     color: Colors.black,
   ),
+
+  // AppBarTheme
   appBarTheme: AppBarTheme(backgroundColor: Colors.black),
+
   bottomAppBarColor: const Color(0xFF35353a),
   dividerColor: const Color(0x1CFFFFFF),
   textTheme: TextTheme(
-    headline1: TextStyle(color: FcColor.headingDark, fontWeight: FontWeight.w300),
+    headline1:
+        TextStyle(color: FcColor.headingDark, fontWeight: FontWeight.w300),
     headline2: TextStyle(color: FcColor.headingDark),
     headline3: TextStyle(color: FcColor.headingDark),
     headline4: TextStyle(color: FcColor.labelDark),

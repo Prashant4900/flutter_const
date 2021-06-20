@@ -1,4 +1,4 @@
-# Collections of widely used widgets and functions.
+# widely used flutter widgets and functions.
 
 ##### Key points :
   - This package allows developers to fetch data from the server with the easiest way,
@@ -7,11 +7,7 @@
   - Pre-Build responsive text style
   - Horizontal and vertical dimensions SizedBox alternative
   - Double press exit function
-
-## Next Plans
-  - Named Route with FcNavigator.
-  - Improve API Calling.
-  - other improvements also
+  - Dark Mode 
 
 ## How to Use 
 
@@ -62,6 +58,9 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
+![Dark Mode](assets/darkmode.gif)
+
+
 
 ### Text Style
 ```dart 
@@ -70,7 +69,7 @@ ElevatedButton(
     onPressed: () {},
     child: Text(
         'move to second page',
-        style: textStyle.buttonWText(context),
+        style: textStyle.buttonText(context),
         ),
     )
 ```

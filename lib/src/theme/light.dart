@@ -19,7 +19,11 @@ ThemeData lightTheme = ThemeData(
     unselectedItemColor: Colors.grey,
   ),
   cardTheme: CardTheme(color: Colors.white),
+
+  // AppBarTheme
   appBarTheme: AppBarTheme(backgroundColor: Colors.white),
+
+  // TextTheme
   textTheme: TextTheme(
     headline1: TextStyle(
       color: textSwatch.shade700,

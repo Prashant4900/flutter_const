@@ -7,4 +7,7 @@
 * small bug fixed
 * FcNavigator Improved
 * dark mode added
-* Hive Local Storage in early state 
+* Hive Local Storage in early state
+* FcTextStyle Improved
+
+ 

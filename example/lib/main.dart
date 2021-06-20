@@ -46,8 +46,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: FcTheme.light,
       darkTheme: FcTheme.dark,
-      themeMode: ThemeMode.light,
-      // themeMode: ThemeMode.dark,
+      // themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       // themeMode: ThemeMode.system,
       home: MyHomePage(),
     );
@@ -68,7 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
     FcTextStyle textStyle = FcTextStyle();
     return Scaffold(
       appBar: AppBar(
-        title: Text("First Screen"),
+        title: Text(
+          "First Screen",
+          style: textStyle.h6BText(context),
+        ),
       ),
       body: Container(
         width: double.infinity,
@@ -83,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text(
                 'move to second page',
-                style: textStyle.buttonWText(context),
+                // style: textStyle.buttonText(context),
               ),
             ),
             fcVSizedBox4,
@@ -97,14 +100,17 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text('Home'),),
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text('Home'),),
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text('Home'),),
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
         ],
       ),
     );
@@ -143,7 +149,7 @@ class _SecondPageState extends State<SecondPage> {
               if (snapshot.hasData) {
                 return Text(
                   snapshot.data!.title,
-                  style: textStyle.bodyBBText(context),
+                  style: textStyle.bodyBText(context),
                 );
               } else if (snapshot.hasError) {
                 return Text("${snapshot.error}");
