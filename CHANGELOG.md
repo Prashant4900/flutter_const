@@ -10,4 +10,10 @@
 * Hive Local Storage in early state
 * FcTextStyle Improved
 
+ ## 0.0.4
  
+ * small bug fixed
+ * dark mode Improved
+ * text formatter
+ 
+  

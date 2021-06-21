@@ -1,27 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_const/src/color.dart';
-import 'package:flutter_const/src/theme/constant.dart';
+import 'package:flutter_const/src/constant/color.dart';
 
 ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
-  primaryColor: Color(0xff141414),
-  scaffoldBackgroundColor: const Color(0xFF0A0A0A),
-  backgroundColor: const Color(0xFF24242a),
-  cardColor: const Color(0xFF2f2f34),
-  bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    backgroundColor: Colors.black,
-    selectedItemColor: Color(0xffD2D6D9),
-    unselectedItemColor: Color(0xff585A5B),
-  ),
-  cardTheme: CardTheme(
-    color: Colors.black,
-  ),
 
-  // AppBarTheme
-  appBarTheme: AppBarTheme(backgroundColor: Colors.black),
-
+  // Colors
+  scaffoldBackgroundColor: FcColor.scaffoldBackgroundDark,
+  backgroundColor: FcColor.backgroundDark,
+  cardColor: FcColor.cardDark,
+  primaryColor: FcColor.primaryDark,
+  primaryColorLight: FcColor.primaryLightDark,
   bottomAppBarColor: const Color(0xFF35353a),
   dividerColor: const Color(0x1CFFFFFF),
+
+  // Themes
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    backgroundColor: FcColor.cardBackgroundDark,
+    selectedItemColor: FcColor.selectedItemDark,
+    unselectedItemColor: FcColor.unselectedItemDark,
+  ),
+  cardTheme: CardTheme(color: FcColor.cardBackgroundDark),
+
+  // AppBarTheme
+  appBarTheme: AppBarTheme(backgroundColor: FcColor.cardBackgroundDark),
+
   textTheme: TextTheme(
     headline1:
         TextStyle(color: FcColor.headingDark, fontWeight: FontWeight.w300),

@@ -1,27 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_const/src/theme/constant.dart';
+import 'package:flutter_const/src/constant/color.dart';
 
 ThemeData lightTheme = ThemeData(
   primarySwatch: primarySwatch,
   brightness: Brightness.light,
 
   // Colors
-  scaffoldBackgroundColor: Color(0xffF2F3F5),
+  scaffoldBackgroundColor: FcColor.scaffoldBackgroundColor,
   backgroundColor: textSwatch.shade100,
-  cardColor: Colors.white,
-  bottomAppBarColor: Colors.white,
+  cardColor: FcColor.cardColor,
+  bottomAppBarColor: FcColor.cardColor,
   dividerColor: Color(0x1C000000),
+  primaryColorLight: FcColor.primaryLightColor,
 
   // Themes
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    backgroundColor: Colors.white,
-    selectedItemColor: Colors.black,
-    unselectedItemColor: Colors.grey,
+    backgroundColor: FcColor.cardColor,
+    selectedItemColor: FcColor.selectedItemColor,
+    unselectedItemColor: FcColor.unselectedItemColor,
   ),
-  cardTheme: CardTheme(color: Colors.white),
+  cardTheme: CardTheme(color: FcColor.cardColor),
 
   // AppBarTheme
-  appBarTheme: AppBarTheme(backgroundColor: Colors.white),
+  appBarTheme: AppBarTheme(backgroundColor: FcColor.cardColor),
 
   // TextTheme
   textTheme: TextTheme(

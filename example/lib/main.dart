@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
       darkTheme: FcTheme.dark,
       // themeMode: ThemeMode.light,
       themeMode: ThemeMode.dark,
-      // themeMode: ThemeMode.system,
+      // themeMode: DynamicTheme().changeDarkMode(isDarkMode),
       home: MyHomePage(),
     );
   }
@@ -89,14 +89,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 // style: textStyle.buttonText(context),
               ),
             ),
-            fcVSizedBox4,
+            fcVSizedBox2,
             Text(
-              "data",
+              "data join".capitalizeFirstOfEach,
               style: textStyle.h6Text(context),
+            ),
+            fcVSizedBox2,
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColorLight,
+                  borderRadius: BorderRadius.all(Radius.circular(20))),
+              child: TextField(
+                // obscureText: true,
+                decoration: InputDecoration(
+                    border: InputBorder.none, hintText: "Password"),
+                style: textStyle.subtitleText(context),
+              ),
             ),
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(onPressed: () {  },),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(

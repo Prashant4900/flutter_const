@@ -1,11 +1,20 @@
 library flutter_const;
 
-// src
-export 'src/backpress.dart';
-export 'src/dimensions.dart';
-export 'src/navigation.dart';
-export 'src/noglow.dart';
-export 'src/textstyle.dart';
+// constant
+export 'src/constant/dimensions.dart';
+
+// utils
+export 'src/utils/backpress.dart';
+export 'src/utils/noglow.dart';
+
+// route
+export 'src/route/navigation.dart';
+
+// text
+export 'src/text/textstyle.dart';
+export 'src/text/format.dart';
+
+// theme
 export 'src/theme/apptheme.dart';
 
 //server
