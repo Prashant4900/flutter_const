@@ -74,6 +74,14 @@ ElevatedButton(
     )
 ```
 
+### Text Format
+```dart 
+Text(
+    "data join".capitalizeFirstOfEach,
+    style: textStyle.h6Text(context),
+    )
+```
+
 ### Dimensions
 ```dart 
 // Vertical
