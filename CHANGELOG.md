@@ -7,7 +7,6 @@
 * small bug fixed
 * FcNavigator Improved
 * dark mode added
-* Hive Local Storage in early state
 * FcTextStyle Improved
 
  ## 0.0.4
@@ -15,5 +14,10 @@
  * small bug fixed
  * dark mode Improved
  * text formatter
+
+  ## 0.0.6
+ 
+ * small bug fixed
+ * Api Calling Improved
  
   

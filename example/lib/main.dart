@@ -26,8 +26,7 @@ class Album {
 // fetch data
 Future<Album> fetchAlbum() async {
   ApiBaseHelper _helper = ApiBaseHelper();
-  final response = await _helper.get(
-      baseurl: 'jsonplaceholder.typicode.com', url: 'albums/2');
+  final response = await _helper.get(url: 'https://jsonplaceholder.typicode.com/albums/2');
   print(response);
   // For Single Item
   return Album.fromJson(response);
@@ -97,20 +96,20 @@ class _MyHomePageState extends State<MyHomePage> {
             fcVSizedBox2,
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColorLight,
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
+              decoration:
+                  BoxDecoration(color: Theme.of(context).primaryColorLight, borderRadius: BorderRadius.all(Radius.circular(20))),
               child: TextField(
                 // obscureText: true,
-                decoration: InputDecoration(
-                    border: InputBorder.none, hintText: "Password"),
+                decoration: InputDecoration(border: InputBorder.none, hintText: "Password"),
                 style: textStyle.subtitleText(context),
               ),
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {  },),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
