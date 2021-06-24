@@ -64,7 +64,7 @@ class Demo extends StatelessWidget {
 ### Api Call
 ```dart
 Future<Album> fetchAlbum() async {
-  ApiBaseHelper _helper = ApiBaseHelper();
+  ApiHelper _helper = ApiHelper();
   final response = await _helper.get(baseurl: 'jsonplaceholder.typicode.com', url: 'albums/2');
   return Album.fromJson(response);
 }

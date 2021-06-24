@@ -25,7 +25,7 @@ class Album {
 
 // fetch data
 Future<Album> fetchAlbum() async {
-  ApiBaseHelper _helper = ApiBaseHelper();
+  ApiHelper _helper = ApiHelper();
   final response = await _helper.get(url: 'https://jsonplaceholder.typicode.com/albums/2');
   print(response);
   // For Single Item
