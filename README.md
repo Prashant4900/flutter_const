@@ -85,7 +85,7 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-![Dark Mode](assets/darkmode.gif)
+![Dark Mode](assets/darkmode.gif | width=100)
 
 
 
