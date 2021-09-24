@@ -5,24 +5,27 @@ ThemeData lightTheme = ThemeData(
   primarySwatch: primarySwatch,
   brightness: Brightness.light,
 
+  // Fonts
+  // fontFamily: "",
+
   // Colors
   scaffoldBackgroundColor: FcColor.scaffoldBackgroundColor,
   backgroundColor: textSwatch.shade100,
   cardColor: FcColor.cardColor,
   bottomAppBarColor: FcColor.cardColor,
-  dividerColor: Color(0x1C000000),
-  primaryColorLight: FcColor.primaryLightColor,
+  dividerColor: const Color(0x1C000000),
+  primaryColor: FcColor.primaryLight,
 
   // Themes
-  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     backgroundColor: FcColor.cardColor,
     selectedItemColor: FcColor.selectedItemColor,
     unselectedItemColor: FcColor.unselectedItemColor,
   ),
-  cardTheme: CardTheme(color: FcColor.cardColor),
+  cardTheme: const CardTheme(color: FcColor.cardColor),
 
   // AppBarTheme
-  appBarTheme: AppBarTheme(backgroundColor: FcColor.cardColor),
+  appBarTheme: const AppBarTheme(backgroundColor: FcColor.cardColor),
 
   // TextTheme
   textTheme: TextTheme(

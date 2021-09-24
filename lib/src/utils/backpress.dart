@@ -11,7 +11,7 @@ Future<bool> fcOnWillPop(context,
   //Statement 1 Or statement2
   bool backButton = backButtonPressedTime == null ||
       currentTime.difference(backButtonPressedTime!) >
-          Duration(milliseconds: 10);
+          const Duration(milliseconds: 10);
 
   if (backButton) {
     backButtonPressedTime = currentTime;

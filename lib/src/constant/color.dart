@@ -22,7 +22,7 @@ class FcColor {
   static const Color cardDark = Color(0xFF2f2f34);
   static const Color backgroundDark = Color(0xFF24242a);
   static const Color scaffoldBackgroundDark = Color(0xFF0A0A0A);
-  static const Color primaryDark = Color(0xff141414);
+  static const Color primaryDark = Color(0xff222831);
   static const Color primaryLightDark = Color(0xff585A5B);
 
   // Light
@@ -36,7 +36,7 @@ class FcColor {
   // static const Color backgroundColor = Color(0xFF24242a);
   static const Color scaffoldBackgroundColor = Color(0xffF2F3F5);
   // static const Color primaryColor = Color(0xff141414);
-  static const Color primaryLightColor = Color(0xffE1E8EB);
+  static const Color primaryLight = Color(0xffE8EAE6);
 }
 
 const int _textColor = 0xFF6B7280;

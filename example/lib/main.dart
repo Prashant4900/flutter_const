@@ -25,9 +25,8 @@ class Album {
 
 // fetch data
 Future<Album> fetchAlbum() async {
-  ApiHelper _helper = ApiHelper();
+  ApiHelper _helper = const ApiHelper();
   final response = await _helper.get(url: 'https://jsonplaceholder.typicode.com/albums/2');
-  print(response);
   // For Single Item
   return Album.fromJson(response);
   // return response.map<Album>((json) => Album.fromJson(json)).toList();
@@ -35,10 +34,12 @@ Future<Album> fetchAlbum() async {
 
 // root
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -48,23 +49,25 @@ class MyApp extends StatelessWidget {
       // themeMode: ThemeMode.light,
       themeMode: ThemeMode.dark,
       // themeMode: DynamicTheme().changeDarkMode(isDarkMode),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
 // First Screen
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String? data;
+
   @override
   Widget build(BuildContext context) {
-    FcTextStyle textStyle = FcTextStyle();
+    FcTextStyle textStyle = const FcTextStyle();
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -74,16 +77,16 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         width: double.infinity,
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
               onPressed: () {
-                FcNavigator().push(context, screen: SecondPage());
+                FcNavigator().push(context, screen: const SecondPage());
               },
-              child: Text(
+              child: const Text(
                 'move to second page',
                 // style: textStyle.buttonText(context),
               ),
@@ -95,12 +98,12 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             fcVSizedBox2,
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               decoration:
-                  BoxDecoration(color: Theme.of(context).primaryColorLight, borderRadius: BorderRadius.all(Radius.circular(20))),
+                  BoxDecoration(color: Theme.of(context).primaryColorLight, borderRadius: const BorderRadius.all(Radius.circular(20))),
               child: TextField(
                 // obscureText: true,
-                decoration: InputDecoration(border: InputBorder.none, hintText: "Password"),
+                decoration: const InputDecoration(border: InputBorder.none, hintText: "Password"),
                 style: textStyle.subtitleText(context),
               ),
             ),
@@ -111,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {},
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -148,12 +151,12 @@ class _SecondPageState extends State<SecondPage> {
 
   @override
   Widget build(BuildContext context) {
-    FcTextStyle textStyle = FcTextStyle();
+    FcTextStyle textStyle = const FcTextStyle();
     return Scaffold(
       appBar: AppBar(
-        title: Text("Second Screen"),
+        title: const Text("Second Screen"),
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: Center(
           child: FutureBuilder<Album>(
@@ -168,7 +171,7 @@ class _SecondPageState extends State<SecondPage> {
                 return Text("${snapshot.error}");
               }
               // By default, show a loading spinner.
-              return CircularProgressIndicator();
+              return const CircularProgressIndicator();
             },
           ),
         ),

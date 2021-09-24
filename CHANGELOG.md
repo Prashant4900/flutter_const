@@ -23,3 +23,7 @@
 ## 0.0.6+1
  
  * small bug fixed
+
+## 0.0.6+2
+
+* small bug fixed

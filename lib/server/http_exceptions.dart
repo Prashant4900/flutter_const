@@ -1,9 +1,10 @@
 class AppException implements Exception {
-  final _message;
-  final _prefix;
+  final dynamic _message;
+  final dynamic _prefix;
 
   AppException([this._message, this._prefix]);
 
+  @override
   String toString() {
     return "$_prefix$_message";
   }
@@ -26,21 +27,21 @@ class InvalidInputException extends AppException {
 }
 
 class NoInternetException {
-  var message;
+  dynamic message;
   NoInternetException(this.message);
 }
 
 class NoServiceFoundException {
-  var message;
+  dynamic message;
   NoServiceFoundException(this.message);
 }
 
 class InvalidFormatException {
-  var message;
+  dynamic message;
   InvalidFormatException(this.message);
 }
 
 class UnknownException {
-  var message;
+  dynamic message;
   UnknownException(this.message);
 }
