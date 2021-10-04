@@ -27,3 +27,7 @@
 ## 0.0.6+2
 
 * small bug fixed
+
+## 0.0.7
+
+* more string operations added
