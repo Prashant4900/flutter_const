@@ -26,7 +26,8 @@ class Album {
 // fetch data
 Future<Album> fetchAlbum() async {
   ApiHelper _helper = const ApiHelper();
-  final response = await _helper.get(url: 'https://jsonplaceholder.typicode.com/albums/2');
+  final response =
+      await _helper.get(url: 'https://jsonplaceholder.typicode.com/albums/2');
   // For Single Item
   return Album.fromJson(response);
   // return response.map<Album>((json) => Album.fromJson(json)).toList();
@@ -99,11 +100,13 @@ class _MyHomePageState extends State<MyHomePage> {
             fcVSizedBox2,
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              decoration:
-                  BoxDecoration(color: Theme.of(context).primaryColorLight, borderRadius: const BorderRadius.all(Radius.circular(20))),
+              decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColorLight,
+                  borderRadius: const BorderRadius.all(Radius.circular(20))),
               child: TextField(
                 // obscureText: true,
-                decoration: const InputDecoration(border: InputBorder.none, hintText: "Password"),
+                decoration: const InputDecoration(
+                    border: InputBorder.none, hintText: "Password"),
                 style: textStyle.subtitleText(context),
               ),
             ),
@@ -155,6 +158,16 @@ class _SecondPageState extends State<SecondPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Second Screen"),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            fcOnWillPop(
+              context,
+              "Exiting, please wait",
+            );
+            FcNavigator().pop(context);
+          },
+        ),
       ),
       body: SizedBox(
         width: double.infinity,

@@ -3,9 +3,12 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 DateTime? backButtonPressedTime;
+//SnackBarBehavior? snackBarBehavior
 
-Future<bool> fcOnWillPop(context,
-    {String? message, SnackBarBehavior? snackBarBehavior}) async {
+Future<bool> fcOnWillPop(
+  context,
+  String? message,
+) async {
   DateTime currentTime = DateTime.now();
 
   //Statement 1 Or statement2
@@ -15,8 +18,14 @@ Future<bool> fcOnWillPop(context,
 
   if (backButton) {
     backButtonPressedTime = currentTime;
-    //TODO: add snackBar
 
+    final snackBar = SnackBar(
+      content: Text(message!),
+      duration: Duration(seconds: 1),
+
+      // behavior: snackBarBehavior,
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
     return false;
   }
   return exit(0);
